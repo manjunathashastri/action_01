@@ -1,0 +1,19 @@
+name: my_first_asci
+on: push
+jobs:
+  my_asci_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: my msg
+        run: echo " welcome"
+      - name: excute shell script
+        run: |
+             chmod +x a.sh
+             ./a.sh
+      - name: list
+        run: ls -lrta
+
+
+
